@@ -1,0 +1,136 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	font-family: 'Questrial', sans-serif;
+}
+header{
+	height: 50px;
+}
+
+#stationMenu{
+	width: 50%;
+	height: 100%;
+	float: left;
+	
+	
+
+}
+
+#contain{
+	text-align: center;
+	width: 100%;
+	height: 95%;
+	float: left;
+	overflow-x: hidden; 
+    overflow-x: auto;
+    background-color: #fafafa;
+}
+#carte_campus{
+	width: 50%;
+	height: 100%;
+	float: right;
+}
+#filterdiv{
+	width: 100%;
+	height: auto;
+	background-color: white;
+}
+.station{
+	width: 200px;
+	height: 125px;
+	background-color: white;
+	display: inline-block;
+	border-radius: 5px;
+	border-bottom: solid lightgray 1px;
+	padding: 10px;
+	margin: 15px;
+}
+.name{
+	color:#ff4d58;
+	text-transform:capitalize;
+	font-size: 19px;
+	padding-bottom: 5px;
+}
+
+.commune{
+	color:#ABABAB;
+	font-style: italic;
+	text-transform:capitalize;
+	padding-bottom: 5px;
+}
+
+
+#searchbar{
+	position: relative;
+	width: 30%;
+	height: 30px;
+	float: left;
+	background-color: #fff;
+	border: lightgray 1px solid;
+	margin: 0 1.5em 1.5em 0;
+	border-radius: 5px;
+	overflow: hidden; 
+	color: #ff4d58;
+	padding-left: 10px;
+	font-size: 15px;
+}
+
+.formfield-select--container {
+	position: relative;
+	width: 30%;
+	float: right;
+	background-color: #fff;
+	border: lightgray 1px solid;
+	margin: 0 1.5em 1.5em 0;
+	border-radius: 5px;
+	overflow: hidden; 
+	color: lightgray;
+}
+
+.formfield-select--container select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+
+	width: 100%; 
+	
+	height: auto;
+	border: 0; 
+	margin: 0;
+	padding: .75em;
+	border-radius: 0;
+	
+	background-color: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+}
+
+
+.formfield-select--container::after { 
+	/* Le pointeur du select */
+	content: '';
+	position: absolute;
+	top: 50%; 
+	margin-top: -3px;
+	right: .75em;  
+	display: block; 
+	width: 0; height: 0;
+	border-color: transparent;
+	border-top-color: #444; 
+	border-width: 6px;
+	border-style: solid;
+	pointer-events: none;
+}
+
+
+::placerholder{
+	color:lightgray;
+};
+
+
+
+
+div.leaflet-popup-content-wrapper{
+	color:red;
+}
