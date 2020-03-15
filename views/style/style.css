@@ -4,15 +4,14 @@ html, body{
 	font-family: 'Questrial', sans-serif;
 }
 header{
-	height: 50px;
+	height: 35px;
+	border-bottom: solid lightgray 1px;
 }
 
 #stationMenu{
 	width: 50%;
 	height: 100%;
 	float: left;
-	
-	
 
 }
 
@@ -34,17 +33,25 @@ header{
 	width: 100%;
 	height: auto;
 	background-color: white;
+	margin-top: 10px;
 }
 .station{
-	width: 200px;
-	height: 125px;
+	width: 160px;
+	/*height: 125px;*/
+	height: auto;
 	background-color: white;
 	display: inline-block;
 	border-radius: 5px;
 	border-bottom: solid lightgray 1px;
 	padding: 10px;
 	margin: 15px;
+	vertical-align: baseline;
 }
+
+.station:hover{
+	transform : scale(1.2);
+}
+
 .name{
 	color:#ff4d58;
 	text-transform:capitalize;
@@ -58,8 +65,33 @@ header{
 	text-transform:capitalize;
 	padding-bottom: 5px;
 }
-
-
+.bottom{
+	display: inline-block;
+	padding-top: 10px;
+}
+.bikeicon img{
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.diviconbike{
+	display: block;
+	bottom: 0;
+	float: left;
+	padding-right: 60px;
+}
+.placeicon img{
+	bottom: 0;
+	width: 30px;
+	height: 30px;
+	float: left;
+}
+.diviconplace{
+	display: block;
+	bottom: 0;
+	float: right;
+}
 #searchbar{
 	position: relative;
 	width: 30%;
@@ -72,7 +104,7 @@ header{
 	overflow: hidden; 
 	color: #ff4d58;
 	padding-left: 10px;
-	font-size: 15px;
+	font-size: 12px;
 }
 
 .formfield-select--container {
@@ -81,7 +113,7 @@ header{
 	float: right;
 	background-color: #fff;
 	border: lightgray 1px solid;
-	margin: 0 1.5em 1.5em 0;
+	margin: 0 1.5em 0 0;
 	border-radius: 5px;
 	overflow: hidden; 
 	color: lightgray;
@@ -99,7 +131,7 @@ header{
 	margin: 0;
 	padding: .75em;
 	border-radius: 0;
-	
+	font-size: 12px;
 	background-color: white;
 	overflow: hidden;
 	text-overflow: ellipsis;

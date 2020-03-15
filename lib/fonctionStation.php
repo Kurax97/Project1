@@ -65,8 +65,20 @@
 		echo "<div data-geo='[".getY($station).",".getX($station)."]' class= 'station'>";
 		nameToDiv($station);
 		communeToDiv($station);
+		echo "<div class = 'bottom'>";
+		echo "<div class = 'diviconbike'>";
+		echo "<div class = 'bikeicon'>";
+		echo "<img src = 'images/bikeg.png'>";
+		echo "</div>";
 		bikesToDiv($station);
+		echo "</div>";
+		echo "<div class = 'diviconplace'>";
+		echo "<div class = 'placeicon'>";
+		echo "<img src = 'images/place.png'>";
+		echo "</div>";
 		placesToDiv($station);
+		echo "</div>";
+		echo "</div>";
 		echo "</div>";
 	}
 

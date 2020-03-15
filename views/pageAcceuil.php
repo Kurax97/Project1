@@ -31,13 +31,22 @@
 	<div id= "filterdiv">
 		<div class="formfield-select--container">
 			<select id="mon_select">
-				<option>Toutes les stations</option>
-				<option>Par nom </option>
-				<option>Par communes </option>
-				<option>Par le nombre de vélos disponibles </option>
-				<option>Par le nombre de places libres disponibles </option>
-				<option>Par les station service </option>
-				<option>Par les station hors service </option>
+				<option>Toutes les communes</option>
+				<option>Lille</option>
+				<option>Hellemmes</option>
+				<option>La Madeleine</option>
+				<option>Mons En Baroeul</option>
+				<option>Villeneuve D'ascq</option>
+				<option>Roubaix</option>
+				<option>Tourcoing</option>
+				<option>Saint Andre Lez Lille</option>
+				<option>Ronchin</option>
+				<option>Lomme</option>
+				<option>Croix</option>
+				<option>Lambersart</option>
+				<option>Faches-Thumesnil</option>
+				<option>Lille Hellemmes</option>
+				<option>Loos</option>
 			</select>
 		</div>
 		<div>
