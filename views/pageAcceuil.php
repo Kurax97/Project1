@@ -31,52 +31,47 @@
 
 <div id="stationMenu">
 	<div id= "filterdiv">
-		<div class="formfield-select--container">
-			<form action="#" method="get" id="selectco">
-				<select id="mon_select" name="commune">
-				<option>Toutes les communes</option>
-				<option value="Lille">Lille</option>
-				<option value="Hellemmes">Hellemmes</option>
-				<option value="La+Madeleine">La Madeleine</option>
-				<option value="Mons+En+Baroeul">Mons En Baroeul</option>
-				<option value="Villeneuve+D'ascq">Villeneuve D'ascq</option>
-				<option value="Roubaix">Roubaix</option>
-				<option value="Tourcoing">Tourcoing</option>
-				<option value="Saint+Andre+Lez+Lille">Saint Andre Lez Lille</option>
-				<option value="Ronchin">Ronchin</option>
-				<option value="Lomme">Lomme</option>
-				<option value="Croix">Croix</option>
-				<option value="Lambersart">Lambersart</option>
-				<option value="Faches-Thumesnil">Faches-Thumesnil</option>
-				<option value="Lille+Hellemmes">Lille Hellemmes</option>
-				<option value="Loos">Loos</option>
-			</select>
-			</form>
-		</div>
 		<div>
 			<input type="text" name="search" id="searchbar" onkeyup="searchFunction()" placeholder="Chercher une station">
 		</div>
-		<div id="containCP">
-			<form action="#" method="get" id="cp" >
-			<div>
-				<input type="checkbox" name="avaiblep" value="p" id="checkP">
-				<label for="checkP">Places Disponibles</label>
-			</div>
-			</form>
-		</div>
-		<div id="containCB">
-			<form action="#" method="get" id="cb">
-			<div>
-				<input type="checkbox" name="avaibleb" value="b" id="checkB">
-				<label for="checkB">Vélos Disponibles</label>
-			</div>
+		<div class="formfield-select--container">
+			<form action="#" method="get" id="selectco">
+				<div id="select">
+					<select id="mon_select" name="commune">
+						<option>Toutes les communes</option>
+						<option value="Lille">Lille</option>
+						<option value="Hellemmes">Hellemmes</option>
+						<option value="La+Madeleine">La Madeleine</option>
+						<option value="Mons+En+Baroeul">Mons En Baroeul</option>
+						<option value="Villeneuve+D'ascq">Villeneuve D'ascq</option>
+						<option value="Roubaix">Roubaix</option>
+						<option value="Tourcoing">Tourcoing</option>
+						<option value="Saint+Andre+Lez+Lille">Saint Andre Lez Lille</option>
+						<option value="Ronchin">Ronchin</option>
+						<option value="Lomme">Lomme</option>
+						<option value="Croix">Croix</option>
+						<option value="Lambersart">Lambersart</option>
+						<option value="Faches-Thumesnil">Faches-Thumesnil</option>
+						<option value="Lille+Hellemmes">Lille Hellemmes</option>
+						<option value="Loos">Loos</option>
+					</select>
+				</div>
+				<div id="check">
+					<div id="checkboxP">
+					<input type="checkbox" name="avaiblep" value="p" id="checkP">
+					<label for="checkP">Places Disponibles</label>
+				</div>
+				<div id="checkboxB">
+					<input type="checkbox" name="avaibleb" value="b" id="checkB">
+					<label for="checkB">Vélos Disponibles</label>
+				</div>
+				</div>
+				<div id="buttonS">
+					<button type="submit" form="selectco">Filtrer</button>
+				</div>
 			</form>
 		</div>
 		
-		
-		<div id="buttonS">
-			<button type="submit" name="send" onclick="submitForms()">Filtrer</button>
-		</div>
 		
 
 	</div>

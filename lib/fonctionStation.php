@@ -1,4 +1,12 @@
 <?php 
+		
+	function allStations($listeOfStations){
+		$listeOfAllStations = array();
+		for($i = 0; $i < sizeof($listeOfStations); $i++){
+			array_push($listeOfAllStations, $listeOfStations[$i]);
+		}
+		return $listeOfAllStations;
+	}
 
 	function activeStations($listeOfStations){
 		$listeOfActiveStations = array();

@@ -18,7 +18,7 @@ function searchFunction() {
 }
 
 submitForms = function(){
-    document.getElementById("selectco").submit();
-    document.getElementById("cb").submit();
-    document.getElementById("cp").submit();
+    document.forms["selectco"].submit();
+    document.forms["cp"].submit();
+    document.forms["cb"].submit();
 }

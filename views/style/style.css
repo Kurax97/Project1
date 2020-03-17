@@ -35,7 +35,11 @@ header{
 	background-color: white;
 	margin-top: 10px;
 	display: inline-block;
+	vertical-align: middle;
+	margin-left: 35px;
+
 }
+
 .station{
 	width: 160px;
 	/*height: 125px;*/
@@ -79,6 +83,10 @@ header{
 	float: left;
 	padding-right: 60px;
 }
+#check{
+	float: left;
+	font-size: 15px;
+}
 .placeicon img{
 	bottom: 0;
 	width: 30px;
@@ -93,7 +101,7 @@ header{
 }
 #searchbar{
 	position: relative;
-	width: 30%;
+	width: 25%;
 	height: 30px;
 	float: left;
 	background-color: #fff;
@@ -112,6 +120,23 @@ header{
 }
 #searchbar:focus{
 	outline: none;
+}
+
+button{
+	width:80px;
+	height:30px;
+	margin-left: 30px;
+	background-color: #ff4d58 ;
+	font-family: 'Questrial', sans-serif;
+	color: white;
+	font-size: 15px;
+	border: 0px solid white;
+	border-radius: 5px;
+	outline: none;
+	}
+
+button:hover{
+	border-bottom: solid lightgray 3px;
 }
 
 .formfield-select--container {
@@ -147,14 +172,15 @@ header{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	position: relative;
-	width: 30%;
-	float: right;
+	width: 25%;
+	float: left;
 	background-color: #fff;
 	border: lightgray 1px solid;
 	margin: 0 1.5em 0 0;
 	border-radius: 5px;
 	overflow: hidden; 
-	color: lightgray;
+	color: #5a5a5a;
+	outline: none;
 
 }
 
@@ -176,7 +202,7 @@ header{
 }
 
 
-::placerholder{
+#searchbar::placerholder{
 	color:lightgray;
 };
 
