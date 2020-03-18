@@ -1,15 +1,23 @@
 
 window.addEventListener('DOMContentLoaded', ()=>{
 	      // 1 : création
-	  let maCarte = L.map('carte_campus');
+	  var maCarte = L.map('carte_campus');
 	  fullscreenControl: true;
 	  
 	      // 2 : choix du fond de carte
-	      
+	  /**  
 	  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	    attribution: '©️ OpenStreetMap contributors'
 	  }).addTo(maCarte);
-	  
+	  */
+	  L.mapbox.accessToken = 'pk.eyJ1Ijoia3VyYXgiLCJhIjoiY2s3cnB4OHo3MGV1eTNtcXQ4cmQ3cnpmaiJ9.Vbo_iqNAbIUbJ-uDnaHfow';
+// Add tiles from the Mapbox Static Tiles API
+// (https://docs.mapbox.com/api/maps/#static-tiles)
+// Tiles are 512x512 pixels and are offset by 1 zoom level
+	L.tileLayer(
+    'https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=' + L.mapbox.accessToken, {
+        attribution: '© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(maCarte);
 	  /**
 	  L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={pk.eyJ1Ijoia3VyYXgiLCJhIjoiY2s3cnB4OHo3MGV1eTNtcXQ4cmQ3cnpmaiJ9.Vbo_iqNAbIUbJ-uDnaHfow}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',

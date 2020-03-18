@@ -1,0 +1,23 @@
+body{
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+	font-family: 'Questrial', sans-serif;
+	background-color: #fafafa;
+}
+#contain{
+	
+}
+
+.infoCon{
+	background-color: white;
+	border-radius: 5px;
+	border-bottom: solid lightgray 1.5px;
+	padding: 10px;
+	margin: 15px;
+}
+.titre{
+	margin: 0 auto;
+	color:#ff4d58;
+	text-align: center;
+}

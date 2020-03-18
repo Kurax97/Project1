@@ -9,24 +9,24 @@
 	<link rel="stylesheet" type="text/css" href="views/style/style.css">
 	<script type="text/javascript" src="views/script/searchFilter.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css">
-  	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" crossorigin=""></script>
+
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+	<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+
 </head>
 
-<body><!--
- <h1>This is a header!</h1>
- 
- <ul id="villes">
-  <li data-geo="[50.62278,3.14417]" data-insee="59009">Villeneuve-d'Ascq</li>
-  <li data-geo="[50.63164,3.06183]" data-insee="59350">Lille</li>
-   etc ... 
-</ul>
-<div id = "background"></div>
-<div id="carte_campus"></div>-->
+<body>
 <header> 
-	<a href="" id="logo">Logo</a>
-	<a href="" class="links">Link1</a>
-	<a href="" class="links">Link2</a>
+	<div id="links">
+		<a href="" id="logo">Logo</a>
+		<span>
+			<a href="" class="links">Home</a>
+			<a href="views/credits.php" class="links" id="mid">Crédits</a>
+			<a href="" class="links">About us</a>		
+		</span>
+		
+	</div>
 </header>
 
 <div id="stationMenu">
@@ -35,10 +35,10 @@
 			<input type="text" name="search" id="searchbar" onkeyup="searchFunction()" placeholder="Chercher une station">
 		</div>
 		<div class="formfield-select--container">
-			<form action="#" method="get" id="selectco">
+			<form action="#" method="post" id="selectco">
 				<div id="select">
 					<select id="mon_select" name="commune">
-						<option>Toutes les communes</option>
+						<option selected="selected">Toutes les communes</option>
 						<option value="Lille">Lille</option>
 						<option value="Hellemmes">Hellemmes</option>
 						<option value="La+Madeleine">La Madeleine</option>
@@ -55,14 +55,24 @@
 						<option value="Lille+Hellemmes">Lille Hellemmes</option>
 						<option value="Loos">Loos</option>
 					</select>
+					<script type="text/javascript">
+						document.getElementById('mon_select').value = "<?php 
+						if(isset($_POST['commune'])){
+							echo $_POST['commune'];
+						}else{
+							echo 'Toutes les communes';
+						}
+
+						?>";
+					</script>
 				</div>
 				<div id="check">
 					<div id="checkboxP">
-					<input type="checkbox" name="avaiblep" value="p" id="checkP">
+					<input type="checkbox" name="avaiblep" value="p" id="checkP" <?php if(isset($_POST['avaiblep'])) echo "checked='checked'"; ?> >
 					<label for="checkP">Places Disponibles</label>
 				</div>
 				<div id="checkboxB">
-					<input type="checkbox" name="avaibleb" value="b" id="checkB">
+					<input type="checkbox" name="avaibleb" value="b" id="checkB" <?php if(isset($_POST['avaibleb'])) echo "checked='checked'"; ?>>
 					<label for="checkB">Vélos Disponibles</label>
 				</div>
 				</div>
